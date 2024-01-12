@@ -1,6 +1,6 @@
-from fishbowlpy.fishbowlclient import DriverType
-from fishbowlpy.fishbowlclient import FishBowlClient
+from fishbowlpy.fishbowlloginmanager import DriverType
+from fishbowlpy.fishbowlloginmanager import FishBowlLoginManager
 
-client = FishBowlClient()
+client = FishBowlLoginManager()
 client.login(driver_type=DriverType.EDGE_DRIVER)
 print(client)

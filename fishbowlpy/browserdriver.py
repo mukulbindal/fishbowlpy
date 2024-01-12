@@ -7,15 +7,25 @@ from .config import CONFIG
 class BrowserDriver:
     __driver = None
     __service = None
+    __driver_type = None
+    __driver_path = None
+    __default_driver_locations = {DriverType.CHROME_DRIVER: CONFIG.CHROME_DRIVER_PATH, 
+                                  DriverType.EDGE_DRIVER:CONFIG.EDGE_DRIVER_PATH}
 
-    def __init__(self, driver_type=DriverType.CHROME_DRIVER) -> None:
+    def __init__(self, driver_type=DriverType.CHROME_DRIVER, driver_path:str=None) -> None:
+        if driver_path:
+            self.__driver_path = driver_path
+        if driver_type:
+            self.__driver_type = driver_type
+        if not driver_path:
+            self.__driver_path = self.__default_driver_locations[self.__driver_type]
         if driver_type == DriverType.CHROME_DRIVER:
             self.__service = webdriver.ChromeService(
-                executable_path=CONFIG.CHROME_DRIVER_PATH)
+                executable_path=self.__driver_path)
             self.__driver = webdriver.Chrome(service=self.__service)
         elif driver_type == DriverType.EDGE_DRIVER:
             self.__service = webdriver.EdgeService(
-                executable_path=CONFIG.EDGE_DRIVER_PATH)
+                executable_path=self.__driver_path)
             self.__driver = webdriver.Edge(service=self.__service)
 
     def get_driver(self) -> ChromiumDriver:

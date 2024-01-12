@@ -15,3 +15,6 @@ class CONFIG:
     SESSION_KEY_COOKIE_EXPIRY = 'expiry'
 
     SESSION_FILE = os.path.join("session", "session_data.json")
+
+    GET_BOWLS_URL = FISHBOWLAPP_URL + "/bowls"
+    GET_POSTS_URL = "https://api.fishbowlapp.com/v4/feed/60f19b15fc523b002f774065/posts?sort=byDate&skipSystemMessages=true&start=0&count=20"
