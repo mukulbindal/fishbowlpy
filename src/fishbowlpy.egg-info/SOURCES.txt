@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/fishbowlpy/__init__.py
+src/fishbowlpy/browserdriver.py
+src/fishbowlpy/config.py
+src/fishbowlpy/drivertype.py
+src/fishbowlpy/fishbowlapi.py
+src/fishbowlpy/fishbowlclient.py
+src/fishbowlpy/fishbowldatatypes.py
+src/fishbowlpy/fishbowlloginmanager.py
+src/fishbowlpy/urlmanager.py
+src/fishbowlpy.egg-info/PKG-INFO
+src/fishbowlpy.egg-info/SOURCES.txt
+src/fishbowlpy.egg-info/dependency_links.txt
+src/fishbowlpy.egg-info/top_level.txt
