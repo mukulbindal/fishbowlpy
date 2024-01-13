@@ -1,14 +1,17 @@
 import os
+
+from .config import CONFIG
+from .filedownloader import download_file
 class FishbowlURLManager:
     __headers = None
 
     def get_cert_path(self):
-        dirname = os.path.dirname(__file__)
-        filename = os.path.join(dirname, 'certs', 'Zscaler Root CA.crt')
-        print(filename)
-        with open(filename, "r") as file:
-            print(file)
-        return filename
+        print(CONFIG.CA_CERT_FILEPATH)
+        if os.path.exists(CONFIG.CA_CERT_FILEPATH):
+            return CONFIG.CA_CERT_FILEPATH
+        download_file(CONFIG.CA_CERT_LOCATION, CONFIG.CA_CERT_FILEPATH)
+        print(CONFIG.CA_CERT_FILEPATH)
+        return CONFIG.CA_CERT_FILEPATH
     
     def get_headers(self, session_key):
         if not self.__headers:

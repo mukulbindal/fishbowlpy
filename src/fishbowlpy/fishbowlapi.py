@@ -29,17 +29,17 @@ class FishBowlAPI:
     def get_bowl_details(self, bowl_name):
         _url = self.__url_manager.get_bowl_details_url(bowl_name)
         _headers = self.__url_manager.get_headers(self.__session_key)
-        _cert = self.__url_manager.get_cert_path()
-        data = requests.get(url=_url, headers=_headers, verify=_cert, timeout=60)
+        #_cert = self.__url_manager.get_cert_path()
+        data = requests.get(url=_url, headers=_headers, verify=True, timeout=60)
         return dict(data.json())
 
     def get_posts_by_bowl_id(self, bowl_id, sort:str=None, start:int=None, count:int=None):
         kwargs = {k:v for k,v in locals().items() if v is not None and k not in ['self', 'bowl_id']}
         _url = self.__url_manager.get_posts_url(bowl_id, **kwargs)
         _headers = self.__url_manager.get_headers(self.__session_key)
-        _cert = self.__url_manager.get_cert_path()
+        #_cert = self.__url_manager.get_cert_path()
         print(_url)
-        data = requests.get(url=_url, headers=_headers, verify=_cert, timeout=60)
+        data = requests.get(url=_url, headers=_headers, verify=True, timeout=60)
         print(len(dict(data.json())))
         return dict(data.json())
 

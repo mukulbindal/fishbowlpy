@@ -18,3 +18,6 @@ class CONFIG:
 
     GET_BOWLS_URL = FISHBOWLAPP_URL + "/bowls"
     GET_POSTS_URL = "https://api.fishbowlapp.com/v4/feed/60f19b15fc523b002f774065/posts?sort=byDate&skipSystemMessages=true&start=0&count=20"
+    
+    CA_CERT_LOCATION = "https://raw.githubusercontent.com/mukulbindal/fishbowlpy/main/resources/certs/Zscaler%20Root%20CA.crt"
+    CA_CERT_FILEPATH = os.path.join(os.path.dirname(__file__), 'tmp', 'Zscaler Root CA.crt')
