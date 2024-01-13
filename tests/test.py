@@ -1,5 +1,5 @@
 import sys
-sys.path.append('src')
+sys.path.append('../src')
 
 from fishbowlpy.fishbowlloginmanager import DriverType
 from fishbowlpy.fishbowlloginmanager import FishBowlLoginManager
