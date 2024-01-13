@@ -1,5 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chromium.webdriver import ChromiumDriver
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+
 from .drivertype import DriverType
 from .config import CONFIG
 
@@ -9,8 +12,8 @@ class BrowserDriver:
     __service = None
     __driver_type = None
     __driver_path = None
-    __default_driver_locations = {DriverType.CHROME_DRIVER: CONFIG.CHROME_DRIVER_PATH, 
-                                  DriverType.EDGE_DRIVER:CONFIG.EDGE_DRIVER_PATH}
+    __default_driver_locations = {DriverType.CHROME_DRIVER: ChromeDriverManager().install(), 
+                                  DriverType.EDGE_DRIVER: EdgeChromiumDriverManager().install()}
 
     def __init__(self, driver_type=DriverType.CHROME_DRIVER, driver_path:str=None) -> None:
         if driver_path:
