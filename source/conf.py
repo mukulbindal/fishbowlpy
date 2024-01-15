@@ -7,8 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+import os 
+
+sys.path.append(os.path.join(os.path.dirname(__file__),'..', 'src'))
 
 project = 'fishbowlpy'
 copyright = '2024, Mukul Bindal'
@@ -21,7 +22,7 @@ release = '0.0.5'
 extensions = ['sphinx.ext.autodoc']
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
 language = 'python'
 
