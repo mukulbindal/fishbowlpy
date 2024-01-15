@@ -2,15 +2,20 @@ import os
 
 from .config import CONFIG
 from .filedownloader import download_file
+
+from .utils.logger import getLogger
+
+LOGGER = getLogger(__name__)
+
 class FishbowlURLManager:
     __headers = None
 
     def get_cert_path(self):
-        print(CONFIG.CA_CERT_FILEPATH)
+        LOGGER.debug(CONFIG.CA_CERT_FILEPATH)
         if os.path.exists(CONFIG.CA_CERT_FILEPATH):
             return CONFIG.CA_CERT_FILEPATH
         download_file(CONFIG.CA_CERT_LOCATION, CONFIG.CA_CERT_FILEPATH)
-        print(CONFIG.CA_CERT_FILEPATH)
+        LOGGER.debug(CONFIG.CA_CERT_FILEPATH)
         return CONFIG.CA_CERT_FILEPATH
     
     def get_headers(self, session_key):

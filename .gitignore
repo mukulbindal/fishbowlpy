@@ -1,4 +1,8 @@
 venv
 session
 .pypirc
-__pycache__
+__pycache__/
+tmp
+tmp/**/*
+*.egg-info/
+*.egg
