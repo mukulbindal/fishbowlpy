@@ -24,6 +24,4 @@ class FishBowlClient:
         # It shoould use the bs4 to parse html and get the proper names
         return ['tech-india', 'job-referrals']
     
-    def get_posts(self, bowl_name, )
-    
         
