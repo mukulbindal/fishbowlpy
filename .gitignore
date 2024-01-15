@@ -6,3 +6,4 @@ tmp
 tmp/**/*
 *.egg-info/
 *.egg
+.token

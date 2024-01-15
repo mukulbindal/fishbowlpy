@@ -14,7 +14,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__),'..', 'src'))
 project = 'fishbowlpy'
 copyright = '2024, Mukul Bindal'
 author = 'Mukul Bindal'
-release = '0.0.5'
+release = '0.0.6'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

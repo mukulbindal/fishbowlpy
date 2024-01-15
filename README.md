@@ -16,7 +16,7 @@ pip install fishbowlpy
 
 ## Usage
 
-Here is an example of the minimum code required to use fishbowlpy. You can find the full documentation soon.
+Here is an example of the minimum code required to use fishbowlpy. You can find the [full documentation here.](https://mukulbindal.github.io/fishbowlpy/)
 
 ```
 from fishbowlpy.fishbowlclient import FishBowlClient
