@@ -4,7 +4,9 @@ import time
 from fishbowlpy.browserdriver import BrowserDriver
 from fishbowlpy.config import CONFIG
 from fishbowlpy.drivertype import DriverType
+from .utils.logger import getLogger
 
+LOGGER = getLogger(__name__)
 
 class FishBowlLoginManager:
     __session_key = None
@@ -29,10 +31,12 @@ class FishBowlLoginManager:
             login_popup (bool, optional): Indicates whether login popup should be opened. Defaults to False.
             driver_type (str, optional): Driver type if login popup is True. Defaults to DriverType.CHROME_DRIVER
         """
+        print("Creating the login manager...")
         if session_key:
             self.__session_key = session_key
         if session_expiry:
             self.__session_expiry = session_expiry
+        print("Attempting to load session...")
         logged_in = self.load_session()
         if not logged_in and login_popup:
             if driver_type:
@@ -56,17 +60,17 @@ class FishBowlLoginManager:
         self.__driver.get(url=CONFIG.FISHBOWLAPP_LOGIN_URL)
 
         while True:
-            print("Attempting to fetch cookie...")
+            LOGGER.debug("Attempting to fetch cookie...")
             cookie = self.__driver.get_cookie(CONFIG.SESSION_KEY_COOKIE_NAME)
 
             if cookie:
-                print("Fetching cookie...", cookie)
+                LOGGER.debug("Fetching cookie..."+ cookie)
                 self.__session_key = cookie.get(CONFIG.SESSION_KEY_COOKIE_VALUE)
                 self.__session_expiry = cookie.get(CONFIG.SESSION_KEY_COOKIE_EXPIRY)
                 self.save_session_data()
                 break
             time.sleep(CONFIG.LOGIN_SLEEP_DURATION)
-        print("Logged in successfully", self.__session_key)
+        LOGGER.debug("Logged in successfully"+ self.__session_key)
         self.__driver.quit()
 
     def __str__(self) -> str:
@@ -88,16 +92,17 @@ class FishBowlLoginManager:
             json.dump(data, session_file)
 
     def load_session(self, file=CONFIG.SESSION_FILE) -> bool:
+        print("Loading session from file:" , file)
         session_data = None
         try:
             with open(file, "r", encoding="utf-8") as session_file:
                 session_data = json.load(session_file)
         except FileNotFoundError as e:
-            print("File not found", e)
+            LOGGER.error("File not found"+ e)
         if not session_data:
             return False
         if session_data[CONFIG.SESSION_KEY_COOKIE_EXPIRY] < time.time():
-            print("Session has Expired")
+            LOGGER.error("Session has Expired")
             return False
         self.__session_key = session_data[CONFIG.SESSION_KEY_COOKIE_VALUE]
         self.__session_expiry = session_data[CONFIG.SESSION_KEY_COOKIE_EXPIRY]
