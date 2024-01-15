@@ -8,7 +8,7 @@ class FishBowlAPI:
     __session_key = None
     __url_manager = None
     def __init__(self, session_key: str):
-        print("Creating fishbowlapi object")
+        LOGGER.debug("Creating fishbowlapi object")
         self.__session_key = session_key
         self.__url_manager = FishbowlURLManager()
 

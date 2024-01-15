@@ -17,7 +17,7 @@ class FishBowlLoginManager:
         self,
         session_key: str = None,
         session_expiry: float = None,
-        login_popup: bool = False,
+        login_popup: bool = True,
         driver_type: str = DriverType.CHROME_DRIVER,
         driver_path: str = None
     ):
@@ -28,15 +28,15 @@ class FishBowlLoginManager:
         Args:
             session_key (str, optional): session key from cookie. Defaults to None.
             session_expiry (float, optional): session expiry in epoch seconds. Defaults to None.
-            login_popup (bool, optional): Indicates whether login popup should be opened. Defaults to False.
+            login_popup (bool, optional): Indicates whether login popup should be opened. Defaults to True.
             driver_type (str, optional): Driver type if login popup is True. Defaults to DriverType.CHROME_DRIVER
         """
-        print("Creating the login manager...")
+        LOGGER.debug("Creating the login manager...")
         if session_key:
             self.__session_key = session_key
         if session_expiry:
             self.__session_expiry = session_expiry
-        print("Attempting to load session...")
+        LOGGER.debug("Attempting to load session...")
         logged_in = self.load_session()
         if not logged_in and login_popup:
             if driver_type:
@@ -46,7 +46,7 @@ class FishBowlLoginManager:
 
     def login(self, driver_type: str = DriverType.CHROME_DRIVER, driver_path: str = None):
         """Fishbowl client logs in by either reading previous session or by manually
-        loggin in.
+        logging in.
 
         Args:
             driver_type (str, optional): Provide the driver type. Defaults to DriverType.CHROME_DRIVER.
@@ -63,14 +63,14 @@ class FishBowlLoginManager:
             LOGGER.debug("Attempting to fetch cookie...")
             cookie = self.__driver.get_cookie(CONFIG.SESSION_KEY_COOKIE_NAME)
 
-            if cookie:
-                LOGGER.debug("Fetching cookie..."+ cookie)
+            if cookie and cookie.get(CONFIG.SESSION_KEY_COOKIE_DOMAIN) == CONFIG.SESSION_KEY_COOKIE_DOMAIN_FISHBOWL:
+                LOGGER.debug(f"Fetching cookie...{cookie}")
                 self.__session_key = cookie.get(CONFIG.SESSION_KEY_COOKIE_VALUE)
                 self.__session_expiry = cookie.get(CONFIG.SESSION_KEY_COOKIE_EXPIRY)
                 self.save_session_data()
                 break
             time.sleep(CONFIG.LOGIN_SLEEP_DURATION)
-        LOGGER.debug("Logged in successfully"+ self.__session_key)
+        LOGGER.debug(f"Logged in successfully - {self.__session_key}")
         self.__driver.quit()
 
     def __str__(self) -> str:
@@ -78,7 +78,7 @@ class FishBowlLoginManager:
 
         Returns:
             str: String representation of the FishBowlLoginManager
-        """        
+        """      
         return f"""FishBowlLoginManager(session_key: {self.__session_key}, session_expiry: {self.__session_expiry})"""
 
     def save_session_data(self):
@@ -92,15 +92,16 @@ class FishBowlLoginManager:
             json.dump(data, session_file)
 
     def load_session(self, file=CONFIG.SESSION_FILE) -> bool:
-        print("Loading session from file:" , file)
+        LOGGER.debug(f"Loading session from file: {file}")
         session_data = None
         try:
             with open(file, "r", encoding="utf-8") as session_file:
                 session_data = json.load(session_file)
         except FileNotFoundError as e:
-            LOGGER.error("File not found"+ e)
+            LOGGER.error(f"File not found {e}")
         if not session_data:
             return False
+        
         if session_data[CONFIG.SESSION_KEY_COOKIE_EXPIRY] < time.time():
             LOGGER.error("Session has Expired")
             return False
@@ -110,10 +111,21 @@ class FishBowlLoginManager:
         return True
 
     def set_session_key(self, session_key=None, session_expiry=None):
+        """Sets the session key and session expiry
+
+        Args:
+            session_key (str, optional): The session key from cookie. Defaults to None.
+            session_expiry (int, optional): The epoch time when session expires. Defaults to None.
+        """        
         if session_expiry:
             self.__session_expiry = session_expiry
         if session_key:
             self.__session_key = session_key
     
-    def get_session_key(self):
+    def get_session_key(self) -> str:
+        """Returns the session key
+
+        Returns:
+            str: Session key for current session
+        """        
         return self.__session_key

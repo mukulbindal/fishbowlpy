@@ -13,6 +13,8 @@ class CONFIG:
     SESSION_KEY_COOKIE_NAME = 'session_key'
     SESSION_KEY_COOKIE_VALUE = 'value'
     SESSION_KEY_COOKIE_EXPIRY = 'expiry'
+    SESSION_KEY_COOKIE_DOMAIN = 'domain'
+    SESSION_KEY_COOKIE_DOMAIN_FISHBOWL = '.fishbowlapp.com'
 
     SESSION_FILE = os.path.join(os.path.dirname(__file__), "tmp", "session", "session_data.json")
 
