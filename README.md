@@ -25,7 +25,7 @@ from fishbowlpy.fishbowlclient import FishBowlClient
 client = FishBowlClient()
 
 # Access posts in the subscribed bowl
-posts = client.get_posts('tech-india')
+posts = client.get_posts(bowl_name='tech-india')
 
 print(posts)
 ```
@@ -48,7 +48,7 @@ We eagerly anticipate your valuable contribution to our project. As a token of o
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/mukulbindal/fishbowlpy/blob/main/LICENSE).
 
 ## Contact Information
 
