@@ -1,3 +1,5 @@
-class DriverType:
-    CHROME_DRIVER = "CHROME_DRIVER"
-    EDGE_DRIVER = "EDGE_DRIVER"
+from enum import Enum
+
+class DriverType(Enum):
+    CHROME_DRIVER = 1
+    EDGE_DRIVER = 2

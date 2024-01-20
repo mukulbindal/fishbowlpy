@@ -1,9 +1,9 @@
 import json
 import os
 import time
-from fishbowlpy.browserdriver import BrowserDriver
-from fishbowlpy.config import CONFIG
-from fishbowlpy.drivertype import DriverType
+from .browserdriver import BrowserDriver
+from . import config
+from .drivertype import DriverType
 from .utils.logger import getLogger
 
 LOGGER = getLogger(__name__)
@@ -57,19 +57,19 @@ class FishBowlLoginManager:
         if not self.__driver:
             self.__driver = BrowserDriver(driver_type=driver_type, 
                                           driver_path=driver_path).get_driver()
-        self.__driver.get(url=CONFIG.FISHBOWLAPP_LOGIN_URL)
+        self.__driver.get(url=config.FISHBOWLAPP_LOGIN_URL)
 
         while True:
             LOGGER.debug("Attempting to fetch cookie...")
-            cookie = self.__driver.get_cookie(CONFIG.SESSION_KEY_COOKIE_NAME)
+            cookie = self.__driver.get_cookie(config.SESSION_KEY_COOKIE_NAME)
 
-            if cookie and cookie.get(CONFIG.SESSION_KEY_COOKIE_DOMAIN) == CONFIG.SESSION_KEY_COOKIE_DOMAIN_FISHBOWL:
+            if cookie and cookie.get(config.SESSION_KEY_COOKIE_DOMAIN) == config.SESSION_KEY_COOKIE_DOMAIN_FISHBOWL:
                 LOGGER.debug(f"Fetching cookie...{cookie}")
-                self.__session_key = cookie.get(CONFIG.SESSION_KEY_COOKIE_VALUE)
-                self.__session_expiry = cookie.get(CONFIG.SESSION_KEY_COOKIE_EXPIRY)
+                self.__session_key = cookie.get(config.SESSION_KEY_COOKIE_VALUE)
+                self.__session_expiry = cookie.get(config.SESSION_KEY_COOKIE_EXPIRY)
                 self.save_session_data()
                 break
-            time.sleep(CONFIG.LOGIN_SLEEP_DURATION)
+            time.sleep(config.LOGIN_SLEEP_DURATION)
         LOGGER.debug(f"Logged in successfully - {self.__session_key}")
         self.__driver.quit()
 
@@ -84,14 +84,14 @@ class FishBowlLoginManager:
     def save_session_data(self):
         """Saves the session data into a json file for future login attempts"""
         data = {
-            CONFIG.SESSION_KEY_COOKIE_VALUE: self.__session_key,
-            CONFIG.SESSION_KEY_COOKIE_EXPIRY: self.__session_expiry,
+            config.SESSION_KEY_COOKIE_VALUE: self.__session_key,
+            config.SESSION_KEY_COOKIE_EXPIRY: self.__session_expiry,
         }
-        os.makedirs(os.path.dirname(CONFIG.SESSION_FILE), exist_ok=True)
-        with open(CONFIG.SESSION_FILE, "w", encoding="utf-8") as session_file:
+        os.makedirs(os.path.dirname(config.SESSION_FILE), exist_ok=True)
+        with open(config.SESSION_FILE, "w", encoding="utf-8") as session_file:
             json.dump(data, session_file)
 
-    def load_session(self, file=CONFIG.SESSION_FILE) -> bool:
+    def load_session(self, file=config.SESSION_FILE) -> bool:
         LOGGER.debug(f"Loading session from file: {file}")
         session_data = None
         try:
@@ -102,11 +102,11 @@ class FishBowlLoginManager:
         if not session_data:
             return False
         
-        if session_data[CONFIG.SESSION_KEY_COOKIE_EXPIRY] < time.time():
+        if session_data[config.SESSION_KEY_COOKIE_EXPIRY] < time.time():
             LOGGER.error("Session has Expired")
             return False
-        self.__session_key = session_data[CONFIG.SESSION_KEY_COOKIE_VALUE]
-        self.__session_expiry = session_data[CONFIG.SESSION_KEY_COOKIE_EXPIRY]
+        self.__session_key = session_data[config.SESSION_KEY_COOKIE_VALUE]
+        self.__session_expiry = session_data[config.SESSION_KEY_COOKIE_EXPIRY]
 
         return True
 
