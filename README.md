@@ -2,6 +2,14 @@
 
 fishbowlpy is a Python library that allows you to interact with fishbowlapp. This library provides a simple interface to login, access bowls, posts, and comments in your fishbowlapp feed.
 
+## First of all what is Fishbowlapp?
+
+Fishbowlapp is an anonymous network where you can post insights of your company without revealing your identity. It's a good platform for those who are looking into job change or want suggestions from random people. It is a Glassdoor initiative but now there are lots of things going on in this platform. You can ask for referrals, give referrals, discuss about ongoing policy changes and that too without revealing your identity. Visit https://www.fishbowlapp.com for more info.
+
+## Features
+
+It is just the beginning. I have created the basic needs, and **looking for the contributors** to make this library developed quickly.
+
 ## Prerequisites
 
 Before you start using fishbowlpy, please make sure you have Python 3.6 or higher installed on your machine.
@@ -29,6 +37,10 @@ posts = client.get_posts(bowl_name='tech-india')
 
 print(posts)
 ```
+
+## Documentation
+
+Documentation is available here [https://mukulbindal.github.io/fishbowlpy/](https://mukulbindal.github.io/fishbowlpy/).
 
 ## Contributions
 
