@@ -1,14 +1,14 @@
 import logging 
 import os
 import sys
-from ..config import CONFIG
+from .. import config
 
 def getLogger(name):
-    os.makedirs(CONFIG.LOGS_PATH, exist_ok=True)
+    os.makedirs(config.LOGS_PATH, exist_ok=True)
     logging.basicConfig(level=logging.DEBUG, 
-                        handlers=[logging.FileHandler(CONFIG.LOGS_FILE),
+                        handlers=[logging.FileHandler(config.LOGS_FILE),
                                   logging.StreamHandler(sys.stdout)],
-                        format=CONFIG.LOGS_FORMAT)
+                        format=config.LOGS_FORMAT)
     logger = logging.getLogger(name)
     return logger
     

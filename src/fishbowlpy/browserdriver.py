@@ -11,18 +11,13 @@ LOGGER = getLogger(__name__)
 
 
 class BrowserDriver:
-    __driver = None
-    __service = None
-    __driver_type = None
-    __driver_path = None
     
     def __init__(self, driver_type=DriverType.CHROME_DRIVER, driver_path:str=None) -> None:
-        if driver_path:
-            self.__driver_path = driver_path
-        if driver_type:
-            self.__driver_type = driver_type
-        if not driver_path:
-            self.__driver_path = self.get_default_driver(self.__driver_type)
+        self.__driver = None
+        self.__service = None
+        self.__driver_type = driver_type or DriverType.CHROME_DRIVER
+        self.__driver_path = driver_path or self.get_default_driver(self.__driver_type)
+
         if driver_type == DriverType.CHROME_DRIVER:
             self.__service = webdriver.ChromeService(
                 executable_path=self.__driver_path)

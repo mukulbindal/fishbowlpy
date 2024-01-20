@@ -7,8 +7,6 @@ LOGGER = getLogger(__name__)
 
 
 class FishBowlClient:
-    __login_manager:FishBowlLoginManager = None
-    __fishbowl_api: FishBowlAPI = None
 
     def __init__(self, login_manager:FishBowlLoginManager=None,
                  session_key: str = None,
@@ -18,17 +16,12 @@ class FishBowlClient:
                  fishbowl_api: FishBowlAPI = None
                  ) -> None:
         
-        if login_manager:
-            self.__login_manager = login_manager
-        else:
-            self.__login_manager = FishBowlLoginManager(session_expiry=session_expiry, 
+        self.__login_manager = login_manager or FishBowlLoginManager(session_expiry=session_expiry, 
                                                         session_key=session_key, 
                                                         login_popup=login_popup, 
                                                         driver_type=driver_type)
-        if fishbowl_api:
-            self.__fishbowl_api = fishbowl_api
-        else:
-            self.__fishbowl_api = FishBowlAPI(session_key=self.__login_manager.get_session_key())
+
+        self.__fishbowl_api = fishbowl_api or FishBowlAPI(session_key=self.__login_manager.get_session_key())
     
     def refresh_session(self):
         pass
