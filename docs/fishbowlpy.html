@@ -330,7 +330,7 @@ document.write(`
 <span id="fishbowlpy-browserdriver-module"></span><h2>fishbowlpy.browserdriver module<a class="headerlink" href="#module-fishbowlpy.browserdriver" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fishbowlpy.browserdriver.BrowserDriver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.browserdriver.</span></span><span class="sig-name descname"><span class="pre">BrowserDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'CHROME_DRIVER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.browserdriver.BrowserDriver" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.browserdriver.</span></span><span class="sig-name descname"><span class="pre">BrowserDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">DriverType.CHROME_DRIVER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.browserdriver.BrowserDriver" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.browserdriver.BrowserDriver.get_default_driver">
@@ -347,117 +347,22 @@ document.write(`
 </section>
 <section id="module-fishbowlpy.config">
 <span id="fishbowlpy-config-module"></span><h2>fishbowlpy.config module<a class="headerlink" href="#module-fishbowlpy.config" title="Permalink to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.config.</span></span><span class="sig-name descname"><span class="pre">CONFIG</span></span><a class="headerlink" href="#fishbowlpy.config.CONFIG" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.CA_CERT_FILEPATH">
-<span class="sig-name descname"><span class="pre">CA_CERT_FILEPATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'E:\\Workspace\\fishbowlpy\\source\\..\\src\\fishbowlpy\\tmp\\certs\\Zscaler</span> <span class="pre">Root</span> <span class="pre">CA.crt'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.CA_CERT_FILEPATH" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.CA_CERT_LOCATION">
-<span class="sig-name descname"><span class="pre">CA_CERT_LOCATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://raw.githubusercontent.com/mukulbindal/fishbowlpy/main/resources/certs/Zscaler%20Root%20CA.crt'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.CA_CERT_LOCATION" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.CHROME_DRIVER_PATH">
-<span class="sig-name descname"><span class="pre">CHROME_DRIVER_PATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'D:\\My</span> <span class="pre">Open</span> <span class="pre">Source</span> <span class="pre">Contributions\\FishbowlApp\\drivers\\chromedriver.exe'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.CHROME_DRIVER_PATH" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.EDGE_DRIVER_PATH">
-<span class="sig-name descname"><span class="pre">EDGE_DRIVER_PATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'D:\\My</span> <span class="pre">Open</span> <span class="pre">Source</span> <span class="pre">Contributions\\FishbowlApp\\drivers\\msedgedriver.exe'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.EDGE_DRIVER_PATH" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.FISHBOWLAPP_LOGIN_URL">
-<span class="sig-name descname"><span class="pre">FISHBOWLAPP_LOGIN_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fishbowlapp.com/login'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.FISHBOWLAPP_LOGIN_URL" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.FISHBOWLAPP_URL">
-<span class="sig-name descname"><span class="pre">FISHBOWLAPP_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fishbowlapp.com'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.FISHBOWLAPP_URL" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.GET_BOWLS_URL">
-<span class="sig-name descname"><span class="pre">GET_BOWLS_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://fishbowlapp.com/bowls'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.GET_BOWLS_URL" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.GET_POSTS_URL">
-<span class="sig-name descname"><span class="pre">GET_POSTS_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://api.fishbowlapp.com/v4/feed/60f19b15fc523b002f774065/posts?sort=byDate&amp;skipSystemMessages=true&amp;start=0&amp;count=20'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.GET_POSTS_URL" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.LOGIN_SLEEP_DURATION">
-<span class="sig-name descname"><span class="pre">LOGIN_SLEEP_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.LOGIN_SLEEP_DURATION" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.LOGS_FILE">
-<span class="sig-name descname"><span class="pre">LOGS_FILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'E:\\Workspace\\fishbowlpy\\source\\..\\src\\fishbowlpy\\tmp\\logs\\fishbowlpy.log'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.LOGS_FILE" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.LOGS_FORMAT">
-<span class="sig-name descname"><span class="pre">LOGS_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'[%(asctime)s]</span> <span class="pre">[%(levelname)s]</span> <span class="pre">[%(process)d]</span> <span class="pre">[%(module)s.%(funcName)s]</span> <span class="pre">[%(lineno)d]:</span> <span class="pre">%(message)s'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.LOGS_FORMAT" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.LOGS_PATH">
-<span class="sig-name descname"><span class="pre">LOGS_PATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'E:\\Workspace\\fishbowlpy\\source\\..\\src\\fishbowlpy\\tmp\\logs'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.LOGS_PATH" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.SESSION_FILE">
-<span class="sig-name descname"><span class="pre">SESSION_FILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'E:\\Workspace\\fishbowlpy\\source\\..\\src\\fishbowlpy\\tmp\\session\\session_data.json'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.SESSION_FILE" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_DOMAIN">
-<span class="sig-name descname"><span class="pre">SESSION_KEY_COOKIE_DOMAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'domain'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_DOMAIN" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_DOMAIN_FISHBOWL">
-<span class="sig-name descname"><span class="pre">SESSION_KEY_COOKIE_DOMAIN_FISHBOWL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'.fishbowlapp.com'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_DOMAIN_FISHBOWL" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_EXPIRY">
-<span class="sig-name descname"><span class="pre">SESSION_KEY_COOKIE_EXPIRY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'expiry'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_EXPIRY" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_NAME">
-<span class="sig-name descname"><span class="pre">SESSION_KEY_COOKIE_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'session_key'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_NAME" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_VALUE">
-<span class="sig-name descname"><span class="pre">SESSION_KEY_COOKIE_VALUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'value'</span></em><a class="headerlink" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_VALUE" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 </section>
 <section id="module-fishbowlpy.drivertype">
 <span id="fishbowlpy-drivertype-module"></span><h2>fishbowlpy.drivertype module<a class="headerlink" href="#module-fishbowlpy.drivertype" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fishbowlpy.drivertype.DriverType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.drivertype.</span></span><span class="sig-name descname"><span class="pre">DriverType</span></span><a class="headerlink" href="#fishbowlpy.drivertype.DriverType" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.drivertype.</span></span><span class="sig-name descname"><span class="pre">DriverType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.drivertype.DriverType" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="fishbowlpy.drivertype.DriverType.CHROME_DRIVER">
-<span class="sig-name descname"><span class="pre">CHROME_DRIVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CHROME_DRIVER'</span></em><a class="headerlink" href="#fishbowlpy.drivertype.DriverType.CHROME_DRIVER" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CHROME_DRIVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#fishbowlpy.drivertype.DriverType.CHROME_DRIVER" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="fishbowlpy.drivertype.DriverType.EDGE_DRIVER">
-<span class="sig-name descname"><span class="pre">EDGE_DRIVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EDGE_DRIVER'</span></em><a class="headerlink" href="#fishbowlpy.drivertype.DriverType.EDGE_DRIVER" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">EDGE_DRIVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#fishbowlpy.drivertype.DriverType.EDGE_DRIVER" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -489,17 +394,8 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlapi.FishBowlAPI.get_posts">
-<span class="sig-name descname"><span class="pre">get_posts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bowl_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlapi.FishBowlAPI.get_posts" title="Permalink to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>bowl_name (str): _description_</p>
-</dd>
-</dl>
-<ol class="arabic simple">
-<li><p>Get the bowl details using the bowl name</p></li>
-<li><p>Fetch the bowl id and call posts api to get the posts</p></li>
-</ol>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">get_posts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bowl_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlapi.FishBowlAPI.get_posts" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlapi.FishBowlAPI.get_posts_by_bowl_id">
@@ -513,22 +409,59 @@ document.write(`
 <span id="fishbowlpy-fishbowlclient-module"></span><h2>fishbowlpy.fishbowlclient module<a class="headerlink" href="#module-fishbowlpy.fishbowlclient" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlclient.FishBowlClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.fishbowlclient.</span></span><span class="sig-name descname"><span class="pre">FishBowlClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">login_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fishbowlpy.fishbowlloginmanager.FishBowlLoginManager" title="fishbowlpy.fishbowlloginmanager.FishBowlLoginManager"><span class="pre">FishBowlLoginManager</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_expiry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login_popup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CHROME_DRIVER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fishbowl_api</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fishbowlpy.fishbowlapi.FishBowlAPI" title="fishbowlpy.fishbowlapi.FishBowlAPI"><span class="pre">FishBowlAPI</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlclient.FishBowlClient" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.fishbowlclient.</span></span><span class="sig-name descname"><span class="pre">FishBowlClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlclient.FishBowlClient" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is used to interact with the FishBowlApp. This class provides the interface with the ability to
+configure the required configuration like driver paths, session key etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>login_manager</strong><strong>(</strong><strong>FishBowlLoginManager</strong><strong>)</strong> -- An instance of the FishBowlLoginManager class.</p></li>
+<li><p><strong>fishbowl_api</strong><strong>(</strong><strong>FishBowlAPI</strong><strong>)</strong> -- An instance of the FishBowlAPI class.</p></li>
+<li><p><strong>driver_type</strong><strong>(</strong><strong>DriverType</strong><strong>)</strong> -- An instance of the DriverType class.</p></li>
+<li><p><strong>**kwargs</strong> -- <p>Any other keyword arguments.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p>Basic Usage:
+&gt;&gt;&gt; from fishbowlpy.fishbowlclient import FishBowlClient
+&gt;&gt;&gt; client = FishBowlClient()
+&gt;&gt;&gt; client.get_bowls_names() 
+&gt;&gt;&gt; client.get_posts(bowl_name='fishbowl')</p>
+<dl class="field-list simple">
+<dt class="field-odd">Copyright<span class="colon">:</span></dt>
+<dd class="field-odd"><ol class="loweralpha simple" start="3">
+<li><p>2024 MIT Licensed</p></li>
+</ol>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlclient.FishBowlClient.get_bowls_names">
 <span class="sig-name descname"><span class="pre">get_bowls_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlclient.FishBowlClient.get_bowls_names" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>This is a placeholder method that will be used to get the names of the subscribed bowls</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlclient.FishBowlClient.get_posts">
-<span class="sig-name descname"><span class="pre">get_posts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bowl_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlclient.FishBowlClient.get_posts" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_posts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bowl_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlclient.FishBowlClient.get_posts" title="Permalink to this definition">#</a></dt>
+<dd><p>This method returns the posts in the <cite>bowl_name</cite> in json format.</p>
+<p>:param bowl_nameBowl name from where to get the posts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Posts in json format.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlclient.FishBowlClient.refresh_session">
 <span class="sig-name descname"><span class="pre">refresh_session</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlclient.FishBowlClient.refresh_session" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>This is a placeholder method that will be used to refresh the session</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -556,7 +489,7 @@ document.write(`
 <span id="fishbowlpy-fishbowlloginmanager-module"></span><h2>fishbowlpy.fishbowlloginmanager module<a class="headerlink" href="#module-fishbowlpy.fishbowlloginmanager" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlloginmanager.FishBowlLoginManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.fishbowlloginmanager.</span></span><span class="sig-name descname"><span class="pre">FishBowlLoginManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_expiry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login_popup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CHROME_DRIVER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlloginmanager.FishBowlLoginManager" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fishbowlpy.fishbowlloginmanager.</span></span><span class="sig-name descname"><span class="pre">FishBowlLoginManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_expiry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login_popup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DriverType.CHROME_DRIVER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlloginmanager.FishBowlLoginManager" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlloginmanager.FishBowlLoginManager.get_session_key">
@@ -575,7 +508,7 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fishbowlpy.fishbowlloginmanager.FishBowlLoginManager.login">
-<span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CHROME_DRIVER'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlloginmanager.FishBowlLoginManager.login" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DriverType.CHROME_DRIVER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fishbowlpy.fishbowlloginmanager.FishBowlLoginManager.login" title="Permalink to this definition">#</a></dt>
 <dd><p>Fishbowl client logs in by either reading previous session or by manually
 logging in.</p>
 <dl class="simple">
@@ -674,30 +607,7 @@ session_expiry (int, optional): The epoch time when session expires. Defaults to
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-fishbowlpy.config">fishbowlpy.config module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG"><code class="docutils literal notranslate"><span class="pre">CONFIG</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.CA_CERT_FILEPATH"><code class="docutils literal notranslate"><span class="pre">CONFIG.CA_CERT_FILEPATH</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.CA_CERT_LOCATION"><code class="docutils literal notranslate"><span class="pre">CONFIG.CA_CERT_LOCATION</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.CHROME_DRIVER_PATH"><code class="docutils literal notranslate"><span class="pre">CONFIG.CHROME_DRIVER_PATH</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.EDGE_DRIVER_PATH"><code class="docutils literal notranslate"><span class="pre">CONFIG.EDGE_DRIVER_PATH</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.FISHBOWLAPP_LOGIN_URL"><code class="docutils literal notranslate"><span class="pre">CONFIG.FISHBOWLAPP_LOGIN_URL</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.FISHBOWLAPP_URL"><code class="docutils literal notranslate"><span class="pre">CONFIG.FISHBOWLAPP_URL</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.GET_BOWLS_URL"><code class="docutils literal notranslate"><span class="pre">CONFIG.GET_BOWLS_URL</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.GET_POSTS_URL"><code class="docutils literal notranslate"><span class="pre">CONFIG.GET_POSTS_URL</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.LOGIN_SLEEP_DURATION"><code class="docutils literal notranslate"><span class="pre">CONFIG.LOGIN_SLEEP_DURATION</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.LOGS_FILE"><code class="docutils literal notranslate"><span class="pre">CONFIG.LOGS_FILE</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.LOGS_FORMAT"><code class="docutils literal notranslate"><span class="pre">CONFIG.LOGS_FORMAT</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.LOGS_PATH"><code class="docutils literal notranslate"><span class="pre">CONFIG.LOGS_PATH</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.SESSION_FILE"><code class="docutils literal notranslate"><span class="pre">CONFIG.SESSION_FILE</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_DOMAIN"><code class="docutils literal notranslate"><span class="pre">CONFIG.SESSION_KEY_COOKIE_DOMAIN</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_DOMAIN_FISHBOWL"><code class="docutils literal notranslate"><span class="pre">CONFIG.SESSION_KEY_COOKIE_DOMAIN_FISHBOWL</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_EXPIRY"><code class="docutils literal notranslate"><span class="pre">CONFIG.SESSION_KEY_COOKIE_EXPIRY</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_NAME"><code class="docutils literal notranslate"><span class="pre">CONFIG.SESSION_KEY_COOKIE_NAME</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.config.CONFIG.SESSION_KEY_COOKIE_VALUE"><code class="docutils literal notranslate"><span class="pre">CONFIG.SESSION_KEY_COOKIE_VALUE</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-fishbowlpy.config">fishbowlpy.config module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-fishbowlpy.drivertype">fishbowlpy.drivertype module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.drivertype.DriverType"><code class="docutils literal notranslate"><span class="pre">DriverType</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fishbowlpy.drivertype.DriverType.CHROME_DRIVER"><code class="docutils literal notranslate"><span class="pre">DriverType.CHROME_DRIVER</span></code></a></li>
