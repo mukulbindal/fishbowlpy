@@ -1,7 +1,9 @@
 import logging 
 import os
 import sys
-from .. import config
+#  I've had some errors when importing config.py like this
+#  from .. import config
+import config
 
 def getLogger(name):
     os.makedirs(config.LOGS_PATH, exist_ok=True)

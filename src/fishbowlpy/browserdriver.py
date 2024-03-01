@@ -9,9 +9,12 @@ from webdriver_manager.microsoft import IEDriverManager
 from webdriver_manager.opera import OperaDriverManager
 from webdriver_manager.core.os_manager import ChromeType
 
-from .drivertype import DriverType
+from drivertype import DriverType
+from utils.logger import getLogger
 
-from .utils.logger import getLogger
+#  I've had errors when importing like this
+#  from .drivertype import DriverType
+#  from .utils.logger import getLogger
 
 LOGGER = getLogger(__name__)
 
@@ -47,12 +50,8 @@ class BrowserDriver:
         elif driver_type == DriverType.OPERA_DRIVER:
             self.__service = service.Service(
                     executable_path=self.__driver_path)
-            # TODO: self.__driver = webdriver.Opera(service=self.__service)
+            self.__driver = webdriver.Opera()
 
-        elif driver_type == DriverType.BRAVE_DRIVER:
-            pass
-
-            # TODO: Must do the BraveDriver
 
     def get_driver(self) -> ChromiumDriver:
         return self.__driver
@@ -75,9 +74,10 @@ class BrowserDriver:
                 case DriverType.OPERA_DRIVER:
                     return OperaDriverManager().install()
 
-                case DriverType.BRAVE_DRIVER:
-                    return ChromeDriverManager(chrome_type=ChromeType.BRAVE).install()
-
 
         except Exception as e:
             LOGGER.error(f"Error getting default driver {e}")
+
+
+if __name__ == '__main__':
+    b = BrowserDriver(driver_type=DriverType.OPERA_DRIVER)
