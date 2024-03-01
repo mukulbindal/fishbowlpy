@@ -8,4 +8,3 @@ class DriverType(Enum):
     IE_DRIVER = 4
     SAFARI_DRIVER = 5
     OPERA_DRIVER = 6
-    BRAVE_DRIVER = 7
