@@ -32,6 +32,7 @@ class FishBowlClient:
         :param login_manager(FishBowlLoginManager): An instance of the FishBowlLoginManager class.
         :param fishbowl_api(FishBowlAPI): An instance of the FishBowlAPI class.
         :param driver_type(DriverType): An instance of the DriverType class.
+        :param driver_path(str): A path to the webdriver executable
         :param **kwargs: Any other keyword arguments.
         
         :return: None
