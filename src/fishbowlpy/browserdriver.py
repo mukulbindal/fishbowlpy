@@ -9,12 +9,9 @@ from webdriver_manager.microsoft import IEDriverManager
 from webdriver_manager.opera import OperaDriverManager
 from webdriver_manager.core.os_manager import ChromeType
 
-from drivertype import DriverType
-from utils.logger import getLogger
+from .drivertype import DriverType
+from .utils.logger import getLogger
 
-#  I've had errors when importing like this
-#  from .drivertype import DriverType
-#  from .utils.logger import getLogger
 
 LOGGER = getLogger(__name__)
 

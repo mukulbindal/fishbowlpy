@@ -46,9 +46,9 @@ class FishBowlClient:
         :copyright: (c) 2024 MIT Licensed
         """
         
-        self.__login_manager = kwargs['login_manager'] or FishBowlLoginManager(**kwargs)
+        self.__login_manager = kwargs['login_manager'] if 'login_manager' in kwargs else FishBowlLoginManager(**kwargs)
 
-        self.__fishbowl_api = kwargs['fishbowl_api'] or FishBowlAPI(session_key=self.__login_manager.get_session_key())
+        self.__fishbowl_api = kwargs['fishbowl_api'] if 'fishbowl_api' in kwargs else FishBowlAPI(session_key=self.__login_manager.get_session_key())
     
     def refresh_session(self):
         """This is a placeholder method that will be used to refresh the session"""
