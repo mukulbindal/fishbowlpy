@@ -58,6 +58,10 @@ By following these steps, you can actively participate in improving the package 
 
 We eagerly anticipate your valuable contribution to our project. As a token of our appreciation, we have reserved a special section where we will acknowledge your involvement. Rest assured, we will diligently update the contributors list under this designated section to recognize your valuable input.
 
+Special Thanks to the contributors of this project:
+
+@jaymeklein Jayme Klein
+
 ## License
 
 This project is licensed under the [MIT License](https://github.com/mukulbindal/fishbowlpy/blob/main/LICENSE).

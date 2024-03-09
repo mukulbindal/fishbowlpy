@@ -9,9 +9,6 @@ from .utils.logger import getLogger
 LOGGER = getLogger(__name__)
 
 class FishBowlLoginManager:
-    __session_key = None
-    __session_expiry = None
-    __driver = None
 
     def __init__(
         self,
@@ -32,10 +29,9 @@ class FishBowlLoginManager:
             driver_type (str, optional): Driver type if login popup is True. Defaults to DriverType.CHROME_DRIVER
         """
         LOGGER.debug("Creating the login manager...")
-        if session_key:
-            self.__session_key = session_key
-        if session_expiry:
-            self.__session_expiry = session_expiry
+        self.__session_key = session_key or None
+        self.__session_expiry = session_expiry or None
+        self.__driver = None
         LOGGER.debug("Attempting to load session...")
         logged_in = self.load_session()
         if not logged_in and login_popup:
@@ -129,3 +125,4 @@ class FishBowlLoginManager:
             str: Session key for current session
         """        
         return self.__session_key
+        
